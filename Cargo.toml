@@ -1,0 +1,33 @@
+[package]
+name = "gron-rs"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.81"
+description = "Make JSON greppable: flatten JSON into discrete assignment lines and reconstruct it back (a Rust gron/ungron, library + CLI)."
+documentation = "https://docs.rs/gron-rs"
+repository = "https://github.com/trananhtung/gron-rs"
+homepage = "https://github.com/trananhtung/gron-rs"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["gron", "json", "grep", "flatten", "cli"]
+categories = ["command-line-utilities", "parsing", "encoding"]
+authors = ["trananhtung"]
+exclude = ["/.github", "/.gitignore"]
+
+[lib]
+name = "gron"
+
+[[bin]]
+name = "gron"
+path = "src/main.rs"
+
+[dependencies]
+serde_json = "1"
+
+[lints.rust]
+missing_docs = "warn"
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = "warn"
+pedantic = "warn"
